@@ -2,117 +2,143 @@
   <defs>
     <style>
       .hub-text { font-family: Arial, sans-serif; font-size: 48px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
-      .care-label { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
-      .enabling-label { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
+      .care-label { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
+      .enabling-label { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
       .ring-text { font-family: Arial, sans-serif; font-size: 26px; font-weight: bold; letter-spacing: 2px; text-anchor: middle; dominant-baseline: middle; fill: #2D1B4E; }
       .dot { fill: white; }
-      .icon { font-size: 48px; }
     </style>
   </defs>
   
-  <!-- Concentric circles with center at 500, 500 -->
-  <!-- Radii: Hub=120, Care inner=120, Care outer=300, Spacer outer=330, Enabling outer=600 -->
-  <!-- Dotted rings at 305 (CARE UNITS) and 630 (ENABLING UNITS) -->
+  <!-- Perfect concentric circles centered at (500, 500) -->
+  <!-- Hub: r=140, Care: r=140-310, Spacer: r=310-340, Enabling: r=340-640 -->
   
-  <!-- Outer dotted ring (ENABLING UNITS label) -->
-  <circle cx="500" cy="500" r="630" fill="none" stroke="#2D1B4E" stroke-width="2" stroke-dasharray="10,6"/>
+  <!-- Outer dotted ring for ENABLING UNITS label (r=660) -->
+  <circle cx="500" cy="500" r="660" fill="none" stroke="#2D1B4E" stroke-width="2" stroke-dasharray="10,6"/>
   
-  <!-- Inner dotted ring (CARE UNITS label) -->
-  <circle cx="500" cy="500" r="305" fill="none" stroke="#2D1B4E" stroke-width="2" stroke-dasharray="10,6"/>
+  <!-- Inner dotted ring for CARE UNITS label (r=330) -->
+  <circle cx="500" cy="500" r="330" fill="none" stroke="#2D1B4E" stroke-width="2" stroke-dasharray="10,6"/>
   
-  <!-- ============== ENABLING RING - 6 × 60° segments ============== -->
-  <!-- Segment 1: Finance (0° to 60°) -->
-  <path d="M 500 500 L 500 -100 A 600 600 0 0 1 1019.6 269.6 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- ============== ENABLING RING (6 × 60° segments) ============== -->
+  <!-- All segments from r=340 to r=640, centered at (500, 500) -->
   
-  <!-- Segment 2: People (60° to 120°) -->
-  <path d="M 500 500 L 1019.6 269.6 A 600 600 0 0 1 1019.6 730.4 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- Segment 1: Finance (0° to 60°, top-right) -->
+  <path d="M 500 500 L 500 -140 A 640 640 0 0 1 1104.4 220 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 3: Risk (120° to 180°) -->
-  <path d="M 500 500 L 1019.6 730.4 A 600 600 0 0 1 500 1100 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- Segment 2: People (60° to 120°, right) -->
+  <path d="M 500 500 L 1104.4 220 A 640 640 0 0 1 1104.4 780 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 4: Marketing (180° to 240°) -->
-  <path d="M 500 500 L 500 1100 A 600 600 0 0 1 -19.6 730.4 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- Segment 3: Risk (120° to 180°, bottom-right) -->
+  <path d="M 500 500 L 1104.4 780 A 640 640 0 0 1 500 1140 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 5: Pastoral Care & Volunteers (240° to 300°) -->
-  <path d="M 500 500 L -19.6 730.4 A 600 600 0 0 1 -19.6 269.6 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- Segment 4: Marketing (180° to 240°, bottom-left) -->
+  <path d="M 500 500 L 500 1140 A 640 640 0 0 1 -104.4 780 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 6: Technology (300° to 360°) -->
-  <path d="M 500 500 L -19.6 269.6 A 600 600 0 0 1 500 -100 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  <!-- Segment 5: Pastoral Care & Volunteers (240° to 300°, left) -->
+  <path d="M 500 500 L -104.4 780 A 640 640 0 0 1 -104.4 220 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 6: Technology (300° to 360°, top-left) -->
+  <path d="M 500 500 L -104.4 220 A 640 640 0 0 1 500 -140 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
   
   <!-- ============== WHITE SPACER RING ============== -->
-  <circle cx="500" cy="500" r="330" fill="white" stroke="none"/>
-  <circle cx="500" cy="500" r="300" fill="none" stroke="white" stroke-width="30"/>
+  <circle cx="500" cy="500" r="340" fill="white" stroke="none"/>
+  <circle cx="500" cy="500" r="310" fill="none" stroke="white" stroke-width="30"/>
   
-  <!-- ============== CARE RING - 4 × 90° segments ============== -->
-  <!-- Segment 1: Home Care (0° to 90°) -->
-  <path d="M 500 500 L 500 200 A 300 300 0 0 1 712.1 287.9 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  <!-- ============== CARE RING (4 × 90° segments) ============== -->
+  <!-- All segments from r=140 to r=310, centered at (500, 500) -->
   
-  <!-- Segment 2: HealthCare & Hospitals (90° to 180°) -->
-  <path d="M 500 500 L 712.1 287.9 A 300 300 0 0 1 500 800 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  <!-- Segment 1: Home Care (0° to 90°, top-right) -->
+  <path d="M 500 500 L 500 190 A 310 310 0 0 1 719.3 280.7 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 3: Advisory Care & Partnerships (180° to 270°) -->
-  <path d="M 500 500 L 500 800 A 300 300 0 0 1 287.9 712.1 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  <!-- Segment 2: HealthCare & Hospitals (90° to 180°, bottom-right) -->
+  <path d="M 500 500 L 719.3 280.7 A 310 310 0 0 1 500 810 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
   
-  <!-- Segment 4: Residential Care (270° to 360°) -->
-  <path d="M 500 500 L 287.9 712.1 A 300 300 0 0 1 500 200 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  <!-- Segment 3: Advisory Care & Partnerships (180° to 270°, bottom-left) -->
+  <path d="M 500 500 L 500 810 A 310 310 0 0 1 280.7 719.3 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 4: Residential Care (270° to 360°, top-left) -->
+  <path d="M 500 500 L 280.7 719.3 A 310 310 0 0 1 500 190 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
   
   <!-- ============== CENTRE HUB ============== -->
-  <circle cx="500" cy="500" r="120" fill="#999999" stroke="white" stroke-width="3"/>
+  <circle cx="500" cy="500" r="140" fill="#999999" stroke="white" stroke-width="4"/>
   
-  <!-- ============== CARE RING LABELS ============== -->
-  <!-- Home Care (Top) -->
-  <text x="500" y="265" class="care-label">Home Care</text>
-  <circle cx="500" cy="245" r="8" class="dot"/>
+  <!-- ============== CARE RING LABELS & ICONS ============== -->
   
-  <!-- HealthCare & Hospitals (Right) -->
-  <text x="715" y="560" class="care-label" font-size="26">HealthCare &amp;</text>
-  <text x="715" y="590" class="care-label" font-size="26">Hospitals</text>
-  <circle cx="715" cy="500" r="8" class="dot"/>
+  <!-- Home Care (Top, 45°) -->
+  <g>
+    <text x="500" y="260" class="care-label">Home Care</text>
+    <circle cx="500" cy="240" r="8" class="dot"/>
+  </g>
   
-  <!-- Advisory Care & Partnerships (Bottom) -->
-  <text x="500" y="750" class="care-label" font-size="26">Advisory Care &amp;</text>
-  <text x="500" y="780" class="care-label" font-size="26">Partnerships</text>
-  <circle cx="500" cy="755" r="8" class="dot"/>
+  <!-- HealthCare & Hospitals (Right, 135°) -->
+  <g>
+    <text x="730" y="560" class="care-label" font-size="24">HealthCare &amp;</text>
+    <text x="730" y="590" class="care-label" font-size="24">Hospitals</text>
+    <circle cx="730" cy="500" r="8" class="dot"/>
+  </g>
   
-  <!-- Residential Care (Left) -->
-  <text x="285" y="560" class="care-label" font-size="26">Residential</text>
-  <text x="285" y="590" class="care-label" font-size="26">Care</text>
-  <circle cx="285" cy="500" r="8" class="dot"/>
+  <!-- Advisory Care & Partnerships (Bottom, 225°) -->
+  <g>
+    <text x="500" y="760" class="care-label" font-size="24">Advisory Care &amp;</text>
+    <text x="500" y="790" class="care-label" font-size="24">Partnerships</text>
+    <circle cx="500" cy="765" r="8" class="dot"/>
+  </g>
   
-  <!-- ============== ENABLING RING LABELS ============== -->
-  <!-- Finance (30°) -->
-  <text x="620" y="155" class="enabling-label">Finance</text>
-  <circle cx="620" cy="135" r="7" class="dot"/>
+  <!-- Residential Care (Left, 315°) -->
+  <g>
+    <text x="270" y="560" class="care-label" font-size="24">Residential</text>
+    <text x="270" y="590" class="care-label" font-size="24">Care</text>
+    <circle cx="270" cy="500" r="8" class="dot"/>
+  </g>
   
-  <!-- People (90°) -->
-  <text x="880" y="280" class="enabling-label">People</text>
-  <circle cx="880" cy="260" r="7" class="dot"/>
+  <!-- ============== ENABLING RING LABELS & ICONS ============== -->
   
-  <!-- Risk (150°) -->
-  <text x="820" y="815" class="enabling-label">Risk</text>
-  <circle cx="820" cy="835" r="7" class="dot"/>
+  <!-- Finance (30°, top-right) -->
+  <g>
+    <text x="640" y="140" class="enabling-label">Finance</text>
+    <circle cx="640" cy="120" r="7" class="dot"/>
+  </g>
   
-  <!-- Marketing (210°) -->
-  <text x="500" y="920" class="enabling-label">Marketing</text>
-  <circle cx="500" cy="950" r="7" class="dot"/>
+  <!-- People (90°, right) -->
+  <g>
+    <text x="900" y="280" class="enabling-label">People</text>
+    <circle cx="900" cy="260" r="7" class="dot"/>
+  </g>
   
-  <!-- Pastoral Care & Volunteers (270°) -->
-  <text x="120" y="815" class="enabling-label" font-size="20">Pastoral Care</text>
-  <text x="120" y="845" class="enabling-label" font-size="20">&amp; Volunteers</text>
-  <circle cx="120" cy="835" r="7" class="dot"/>
+  <!-- Risk (150°, bottom-right) -->
+  <g>
+    <text x="840" y="830" class="enabling-label">Risk</text>
+    <circle cx="840" cy="850" r="7" class="dot"/>
+  </g>
   
-  <!-- Technology (330°) -->
-  <text x="120" y="280" class="enabling-label">Technology</text>
-  <circle cx="120" cy="260" r="7" class="dot"/>
+  <!-- Marketing (210°, bottom) -->
+  <g>
+    <text x="500" y="920" class="enabling-label">Marketing</text>
+    <circle cx="500" cy="945" r="7" class="dot"/>
+  </g>
+  
+  <!-- Pastoral Care & Volunteers (270°, left) -->
+  <g>
+    <text x="100" y="830" class="enabling-label" font-size="20">Pastoral Care</text>
+    <text x="100" y="860" class="enabling-label" font-size="20">&amp; Volunteers</text>
+    <circle cx="100" cy="850" r="7" class="dot"/>
+  </g>
+  
+  <!-- Technology (330°, top-left) -->
+  <g>
+    <text x="100" y="280" class="enabling-label">Technology</text>
+    <circle cx="100" cy="260" r="7" class="dot"/>
+  </g>
   
   <!-- ============== CENTRE HUB TEXT ============== -->
   <text x="500" y="480" class="hub-text">Hammond</text>
   <text x="500" y="535" class="hub-text">Innovations</text>
   
   <!-- ============== RING LABELS ============== -->
-  <!-- CARE UNITS (top) -->
-  <text x="500" y="275" class="ring-text">CARE UNITS</text>
   
-  <!-- ENABLING UNITS (bottom) -->
-  <text x="500" y="775" class="ring-text">ENABLING UNITS</text>
+  <!-- CARE UNITS (top of inner dotted ring) -->
+  <text x="500" y="295" class="ring-text">CARE UNITS</text>
+  
+  <!-- ENABLING UNITS (bottom of outer dotted ring) -->
+  <text x="500" y="765" class="ring-text">ENABLING UNITS</text>
+  
 </svg>
