@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .hub-text { font-family: Arial, sans-serif; font-size: 48px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
+      .care-label { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
+      .enabling-label { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; fill: white; }
+      .ring-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; letter-spacing: 2px; text-anchor: middle; dominant-baseline: middle; fill: #2D1B4E; }
+      .dotted-ring { stroke: #2D1B4E; stroke-width: 2; stroke-dasharray: 8,8; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Define radii for concentric circles -->
+  <!-- Centre hub: r=150 -->
+  <!-- Care ring: r=150 to r=350 (thickness=200) -->
+  <!-- White spacer: r=350 to r=380 (thickness=30) -->
+  <!-- Enabling ring: r=380 to r=650 (thickness=270) -->
+  <!-- Outer dotted ring: r=680 -->
+  
+  <!-- Outer dotted ring for ENABLING UNITS -->
+  <circle cx="500" cy="500" r="680" class="dotted-ring"/>
+  
+  <!-- Inner dotted ring for CARE UNITS -->
+  <circle cx="500" cy="500" r="350" class="dotted-ring"/>
+  
+  <!-- ENABLING RING (Outer) - 6 segments at 60° each -->
+  <!-- Segment 1: 0° to 60° - Finance -->
+  <path d="M 500 500 L 500 150 A 650 650 0 0 1 936.6 149.9 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 2: 60° to 120° - People -->
+  <path d="M 500 500 L 936.6 149.9 A 650 650 0 0 1 936.6 850.1 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 3: 120° to 180° - Risk -->
+  <path d="M 500 500 L 936.6 850.1 A 650 650 0 0 1 500 850 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 4: 180° to 240° - Marketing -->
+  <path d="M 500 500 L 500 850 A 650 650 0 0 1 63.4 850.1 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 5: 240° to 300° - Pastoral Care & Volunteers -->
+  <path d="M 500 500 L 63.4 850.1 A 650 650 0 0 1 63.4 149.9 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 6: 300° to 360° - Technology -->
+  <path d="M 500 500 L 63.4 149.9 A 650 650 0 0 1 500 150 Z" fill="#FF8C00" stroke="white" stroke-width="2"/>
+  
+  <!-- WHITE SPACER RING -->
+  <circle cx="500" cy="500" r="380" fill="white" stroke="none"/>
+  <circle cx="500" cy="500" r="350" fill="none" stroke="white" stroke-width="30"/>
+  
+  <!-- CARE RING (Inner) - 4 segments at 90° each -->
+  <!-- Segment 1: 0° to 90° - Home Care -->
+  <path d="M 500 500 L 500 150 A 350 350 0 0 1 747.5 252.5 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 2: 90° to 180° - Healthcare & Hospitals -->
+  <path d="M 500 500 L 747.5 252.5 A 350 350 0 0 1 500 850 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 3: 180° to 270° - Advisory Care & Partnerships -->
+  <path d="M 500 500 L 500 850 A 350 350 0 0 1 252.5 747.5 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  
+  <!-- Segment 4: 270° to 360° - Residential Care -->
+  <path d="M 500 500 L 252.5 747.5 A 350 350 0 0 1 500 150 Z" fill="#2D1B4E" stroke="white" stroke-width="2"/>
+  
+  <!-- CENTRE HUB -->
+  <circle cx="500" cy="500" r="150" fill="#999999" stroke="white" stroke-width="3"/>
+  
+  <!-- CARE SEGMENT LABELS (positioned in care ring) -->
+  <!-- Home Care (top) -->
+  <g>
+    <text x="500" y="235" class="care-label">Home Care</text>
+    <circle cx="500" cy="215" r="12" fill="white"/>
+  </g>
+  
+  <!-- Healthcare & Hospitals (right) -->
+  <g>
+    <text x="650" y="640" class="care-label" font-size="28">HealthCare &amp;</text>
+    <text x="650" y="670" class="care-label" font-size="28">Hospitals</text>
+    <circle cx="680" cy="500" r="12" fill="white"/>
+  </g>
+  
+  <!-- Advisory Care & Partnerships (bottom) -->
+  <g>
+    <text x="500" y="765" class="care-label" font-size="28">Advisory Care &amp;</text>
+    <text x="500" y="795" class="care-label" font-size="28">Partnerships</text>
+    <circle cx="500" cy="785" r="12" fill="white"/>
+  </g>
+  
+  <!-- Residential Care (left) -->
+  <g>
+    <text x="350" y="640" class="care-label" font-size="28">Residential</text>
+    <text x="350" y="670" class="care-label" font-size="28">Care</text>
+    <circle cx="320" cy="500" r="12" fill="white"/>
+  </g>
+  
+  <!-- ENABLING SEGMENT LABELS (positioned in enabling ring) -->
+  <!-- Finance (top-right 30°) -->
+  <g>
+    <text x="620" y="120" class="enabling-label">Finance</text>
+    <circle cx="590" cy="90" r="10" fill="white"/>
+  </g>
+  
+  <!-- People (right 90°) -->
+  <g>
+    <text x="850" y="220" class="enabling-label">People</text>
+    <circle cx="880" cy="190" r="10" fill="white"/>
+  </g>
+  
+  <!-- Risk (right-bottom 150°) -->
+  <g>
+    <text x="820" y="850" class="enabling-label">Risk</text>
+    <circle cx="850" cy="820" r="10" fill="white"/>
+  </g>
+  
+  <!-- Marketing (bottom 210°) -->
+  <g>
+    <text x="500" y="920" class="enabling-label">Marketing</text>
+    <circle cx="500" cy="950" r="10" fill="white"/>
+  </g>
+  
+  <!-- Pastoral Care & Volunteers (left-bottom 270°) -->
+  <g>
+    <text x="180" y="850" class="enabling-label" font-size="26">Pastoral Care</text>
+    <text x="180" y="880" class="enabling-label" font-size="26">&amp; Volunteers</text>
+    <circle cx="150" cy="820" r="10" fill="white"/>
+  </g>
+  
+  <!-- Technology (left 330°) -->
+  <g>
+    <text x="150" y="220" class="enabling-label">Technology</text>
+    <circle cx="120" cy="190" r="10" fill="white"/>
+  </g>
+  
+  <!-- CENTRE HUB TEXT -->
+  <text x="500" y="485" class="hub-text">Hammond</text>
+  <text x="500" y="535" class="hub-text">Innovations</text>
+  
+  <!-- RING LABELS -->
+  <!-- CARE UNITS (top of inner dotted ring) -->
+  <text x="500" y="320" class="ring-text">CARE UNITS</text>
+  
+  <!-- ENABLING UNITS (bottom of outer dotted ring) -->
+  <text x="500" y="730" class="ring-text">ENABLING UNITS</text>
+</svg>
